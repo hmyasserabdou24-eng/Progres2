@@ -28,7 +28,7 @@ class MealBookingWorker(
         val restoId = inputData.getString(KEY_RESTAURANT_ID) ?: ""
         val restoName = inputData.getString(KEY_RESTAURANT_NAME) ?: ""
 
-        val mealType = try { MealType.valueOf(mealTypeName) } catch (_: Exception) { return Result.failure() }
+        val mealType = try { MealType.valueOf(mealTypeName) } catch (e: Exception) { return Result.failure() }
 
         val app = applicationContext as WebetuAutoMealsApp
         val res = app.triggerMealBookingUseCase(studentId, targetDate, mealType, resId, restoId, restoName)

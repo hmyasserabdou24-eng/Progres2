@@ -35,8 +35,8 @@ class SchedulePreferencesDataStore(private val context: Context) {
             selectedResidenceName = pref[Keys.RES_NAME] ?: "",
             selectedRestaurantId = pref[Keys.RESTO_ID] ?: "",
             selectedRestaurantName = pref[Keys.RESTO_NAME] ?: "",
-            selectedMeals = pref[Keys.MEALS]?.mapNotNull { try { MealType.valueOf(it) } catch (_: Exception) { null } }?.toSet() ?: emptySet(),
-            selectedDays = pref[Keys.DAYS]?.mapNotNull { try { DayOfWeekOption.valueOf(it) } catch (_: Exception) { null } }?.toSet() ?: emptySet(),
+            selectedMeals = pref[Keys.MEALS]?.mapNotNull { try { MealType.valueOf(it) } catch (e: Exception) { null } }?.toSet() ?: emptySet(),
+            selectedDays = pref[Keys.DAYS]?.mapNotNull { try { DayOfWeekOption.valueOf(it) } catch (e: Exception) { null } }?.toSet() ?: emptySet(),
             attemptHour = pref[Keys.HOUR] ?: 19,
             attemptMinute = pref[Keys.MINUTE] ?: 0
         )

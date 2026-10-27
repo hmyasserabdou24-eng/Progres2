@@ -29,7 +29,7 @@ data class BookingAttemptEntity(
     val confirmationReference: String? = null,
     val rawVerificationProof: String? = null
 ) {
-    val mealTypeEnum: MealType get() = try { MealType.valueOf(mealType) } catch (_: Exception) { MealType.LUNCH }
-    val statusEnum: BookingStatus get() = try { BookingStatus.valueOf(status) } catch (_: Exception) { BookingStatus.UNCONFIRMED }
-    val executionMethodEnum: ExecutionMethod get() = try { ExecutionMethod.valueOf(executionMethod) } catch (_: Exception) { ExecutionMethod.ASSISTED_MANUAL }
+    val mealTypeEnum: MealType get() = try { MealType.valueOf(mealType) } catch (e: Exception) { MealType.LUNCH }
+    val statusEnum: BookingStatus get() = try { BookingStatus.valueOf(status) } catch (e: Exception) { BookingStatus.UNCONFIRMED }
+    val executionMethodEnum: ExecutionMethod get() = try { ExecutionMethod.valueOf(executionMethod) } catch (e: Exception) { ExecutionMethod.ASSISTED_MANUAL }
 }

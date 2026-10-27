@@ -23,7 +23,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.List as ListIcon
+import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Button
@@ -72,7 +72,7 @@ private data class TabItem(val label: String, val icon: ImageVector)
 private val TABS = listOf(
     TabItem("الرئيسية", Icons.Filled.Home),
     TabItem("الإعداد", Icons.Filled.Settings),
-    TabItem("السجل", ListIcon),
+    TabItem("السجل", Icons.Filled.List),
     TabItem("الأمان", Icons.Filled.Lock)
 )
 
